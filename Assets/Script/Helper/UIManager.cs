@@ -145,7 +145,7 @@ public class UIManager : MonoBehaviour
     public void InitGame()
     {
         timeSinceStartGame = 0;
-       // player.transform.position = startPoint.position;
+        player.transform.position = startPoint.position;
         STF.uiManager.game = true;
         player.SetActive(true);
 
