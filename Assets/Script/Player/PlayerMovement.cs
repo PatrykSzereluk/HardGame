@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    public float speed;
+    [SerializeField]
+    private float speed;
 
 
     private void Update()
@@ -34,9 +34,16 @@ public class PlayerMovement : MonoBehaviour
             tmpPos.x += speed * Time.deltaTime;
         }
 
-        transform.position = tmpPos;
-
+        Vector3 tmp = new Vector3(tmpPos.x, tmpPos.y, -2);
+        transform.position = tmp;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Collider2D>().CompareTag(Tags.ENDGAME))
+        {
+            Debug.Log("Win");
+        }
+    }
 
 }
