@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             STF.uiManager.EndGame();
             STF.uiManager.game = false;
+            STF.uiManager.SavePlayerTime();
         }
     }
 

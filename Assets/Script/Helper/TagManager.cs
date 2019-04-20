@@ -11,4 +11,10 @@ public static class Tags
     public const string ENDGAME = "EndGame";
 
 
+
+}
+
+public static class PlayerPrefsTags
+{
+    public const string BESTTIME = "BestTime";
 }
