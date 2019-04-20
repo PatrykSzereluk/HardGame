@@ -128,10 +128,10 @@ public class UIManager : MonoBehaviour
                 Debug.LogError(e);
             }
 
-            float allTimeTmp = (tmpMinutes * 60) + tmpSeconds + (tmpMilliSeconds / 1000);
+            float allTimeTmp = (tmpMinutes * 60) + tmpSeconds + tmpMilliSeconds;
 
 
-            if (allTimeTmp > (minutes * 60) + seconds + (milliseconds / 1000))
+            if (allTimeTmp > (minutes * 60) + seconds + milliseconds)
                 PlayerPrefs.SetString(PlayerPrefsTags.BESTTIME, counterText.text);
 
         }
@@ -145,7 +145,7 @@ public class UIManager : MonoBehaviour
     public void InitGame()
     {
         timeSinceStartGame = 0;
-        player.transform.position = startPoint.position;
+       // player.transform.position = startPoint.position;
         STF.uiManager.game = true;
         player.SetActive(true);
 
