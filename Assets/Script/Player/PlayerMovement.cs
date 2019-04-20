@@ -42,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.GetComponent<Collider2D>().CompareTag(Tags.ENDGAME))
         {
-            Debug.Log("Win");
+            STF.uiManager.EndGame();
+            STF.uiManager.game = false;
         }
     }
 

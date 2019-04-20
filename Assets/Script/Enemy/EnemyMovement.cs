@@ -35,7 +35,8 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (collision.collider.CompareTag(Tags.PLAYER))
         {
-            Debug.Log("EndGame");
+            STF.uiManager.EndGame();
+            STF.uiManager.game = false;
         }
 
     }
